@@ -1,0 +1,4 @@
+/* hides one coin when page refreshes  */
+#tails {
+  display: none;
+}

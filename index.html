@@ -2,40 +2,18 @@
 <html>
   <head>
     <title>Coin Toss Game</title>
-    <style>
-      /* hides one coin when page refreshes  */
-      #tails {
-        display: none;
-      }
-    </style>
+    <!-- External CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <!-- External JS file -->
+    <script type="text/javascript" src="actions.js"></script>
   </head>
-
   <body>
     <h1>Coin Toss</h1>
     <img src='images/heads.jpg' alt='heads of coin' width=300 height=300 id='heads'>
-    <img src='images/tails.jpg' alt='heads of coin' width=300 height=300 id='tails'>
+    <img src='images/tails.jpg' alt='tails of coin' width=300 height=300 id='tails'>
     <br><br>
-    <button>Flip</button>
-
-    <script>
-      $(document).ready(function() {
-        $('button').click(function() {
-          //generate random number from 0 to 100
-          var num = Math.floor(Math.random() * 100);
-          console.log(num);
-
-          //if random number < 50, show heads (otherwise tails)
-          if(num < 50) {
-            $('#heads').show();
-            $('#tails').hide();
-          } else {
-            $('#tails').show();
-            $('#heads').hide();
-          }
-        })
-      });
-    </script>
-
+    <button id='flipBtn'>Flip</button>
   </body>
 </html>
